@@ -1,0 +1,31 @@
+{
+  "schema": "glaciereq.proof-receipt.v1",
+  "repository": "GlacierEQ/databricks-feature-lineage-passport",
+  "source_sha": "cb3f0f0830f5fcaed705b9653dab607ec5d9c54ccccd15c01272ecf64277a005",
+  "proof_id": "wave-b-databricks-feature-lineage-passport-1786315039",
+  "environment": {
+    "python": "3.9.6",
+    "PYTHONPATH": "."
+  },
+  "tests": [
+    "PYTHONPATH=. python3 -m unittest discover -s tests -v (x2)"
+  ],
+  "adversarial_tests": [
+    "tests/test_adversarial.py"
+  ],
+  "runtime": {
+    "operate": "scripts/operate.py (x2)",
+    "dual_run_ok": true,
+    "proof_dual_run_ok": true
+  },
+  "result": "PASS",
+  "limitations": [
+    "not production deployed",
+    "reference implementation only"
+  ],
+  "timestamp": "2026-08-09T22:37Z",
+  "artifact_hashes": {
+    "operability_receipt": "c485fbc525515127cf94343e55762d9e89db9a099ab4ee56c68c592cdd720b6f"
+  },
+  "scratch_proof_log": "wave_b/databricks-feature-lineage-passport/proof.log"
+}

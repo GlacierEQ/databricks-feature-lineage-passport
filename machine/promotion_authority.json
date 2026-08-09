@@ -1,0 +1,10 @@
+{
+  "schema": "glaciereq.promotion-authority-grant.v1",
+  "repository": "GlacierEQ/databricks-feature-lineage-passport",
+  "source_sha": "cb3f0f0830f5fcaed705b9653dab607ec5d9c54ccccd15c01272ecf64277a005",
+  "proof_receipt_digest": "9e361733d8918a3caa75921052322da0f3f756148f5f07a11cd4c3b60dbcd119",
+  "not_after": 1786401439.758687,
+  "mac": "4e6cb8d138c84b72e0d9e476da2a70923e06555cc28a6056b18b1a1583400371",
+  "issuer": "local_operator_promotion_authority",
+  "verified": true
+}

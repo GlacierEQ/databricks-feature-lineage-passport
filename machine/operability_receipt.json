@@ -1,0 +1,18 @@
+{
+  "schema": "glaciereq.operability-receipt.v1",
+  "repository": "GlacierEQ/databricks-feature-lineage-passport",
+  "at": "2026-08-09T22:37Z",
+  "source_sha": "cb3f0f0830f5fcaed705b9653dab607ec5d9c54ccccd15c01272ecf64277a005",
+  "entry": "scripts/operate.py",
+  "primary_output": {
+    "bad": [
+      "f2"
+    ],
+    "decision": "REFUSE",
+    "expected_decision": "REFUSE",
+    "ok": true
+  },
+  "dual_run_ok": true,
+  "result": "PASS",
+  "scratch_launch_log": "wave_b/databricks-feature-lineage-passport/launch.log"
+}
