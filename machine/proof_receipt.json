@@ -1,8 +1,9 @@
 {
   "schema": "glaciereq.proof-receipt.v1",
   "repository": "GlacierEQ/databricks-feature-lineage-passport",
-  "source_sha": "cb3f0f0830f5fcaed705b9653dab607ec5d9c54ccccd15c01272ecf64277a005",
-  "proof_id": "wave-b-databricks-feature-lineage-passport-1786315039",
+  "source_sha": "35f056c7ba00622e52ee7ef0f5cc499076c6d3422d65d220f2ca73be71d57052",
+  "source_sha_algorithm": "sha256(newline_join('{rel}:{sha256(bytes)}' for src|scripts|tests .py/.md/.json))",
+  "proof_id": "wave-b-fix-databricks-feature-lineage-passport-1786316261",
   "environment": {
     "python": "3.9.6",
     "PYTHONPATH": "."
@@ -12,6 +13,9 @@
   ],
   "adversarial_tests": [
     "tests/test_adversarial.py"
+  ],
+  "authority_tests": [
+    "tests/test_promotion_authority.py::test_real_machine_grant_verifies_against_proof_receipt"
   ],
   "runtime": {
     "operate": "scripts/operate.py (x2)",
@@ -23,9 +27,9 @@
     "not production deployed",
     "reference implementation only"
   ],
-  "timestamp": "2026-08-09T22:37Z",
+  "timestamp": "2026-08-09T22:57Z",
   "artifact_hashes": {
-    "operability_receipt": "c485fbc525515127cf94343e55762d9e89db9a099ab4ee56c68c592cdd720b6f"
+    "operability_receipt": "3d2f52bbd42ff0ef9b66cf8d3f1f1b6dff377585d308a724a0705225750aa8a4"
   },
   "scratch_proof_log": "wave_b/databricks-feature-lineage-passport/proof.log"
 }

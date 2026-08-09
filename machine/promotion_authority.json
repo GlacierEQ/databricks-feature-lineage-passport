@@ -1,10 +1,12 @@
 {
   "schema": "glaciereq.promotion-authority-grant.v1",
   "repository": "GlacierEQ/databricks-feature-lineage-passport",
-  "source_sha": "cb3f0f0830f5fcaed705b9653dab607ec5d9c54ccccd15c01272ecf64277a005",
-  "proof_receipt_digest": "9e361733d8918a3caa75921052322da0f3f756148f5f07a11cd4c3b60dbcd119",
-  "not_after": 1786401439.758687,
-  "mac": "4e6cb8d138c84b72e0d9e476da2a70923e06555cc28a6056b18b1a1583400371",
+  "source_sha": "35f056c7ba00622e52ee7ef0f5cc499076c6d3422d65d220f2ca73be71d57052",
+  "proof_receipt_digest": "92e52c3ebad30f3c6901446fdb0b7a2b91d30be682ab623d327ae355e1fea96e",
+  "not_after": 1788908261.7824872,
+  "mac": "9ea4d419b88f759a52541e253af60f4073764e9ecc2e2d6ae564a3cfab614d0b",
   "issuer": "local_operator_promotion_authority",
-  "verified": true
+  "verified": true,
+  "verification_procedure": "LOCAL reference authority only. Secret constant: src/promotion_authority.py::LOCAL_OPERATOR_SECRET (= b'glaciereq-local-operator-promotion-authority-v1'). Verify: python3 scripts/verify_promotion_grant.py",
+  "secret_ref": "src/promotion_authority.py::LOCAL_OPERATOR_SECRET"
 }
