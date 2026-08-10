@@ -1,1 +1,23 @@
-{"capabilities": ["hyper-scaling"]}
+{
+  "schema": "glaciereq.repo-capabilities.v1",
+  "repository": "GlacierEQ/databricks-feature-lineage-passport",
+  "capability_family": "feature_lineage_admission",
+  "capabilities": [
+    "feature-lineage-passport-admission",
+    "feature-source-table-binding",
+    "transform-hash-provenance-binding",
+    "feature-name-passport-consistency",
+    "fail-closed-missing-lineage-refusal",
+    "deterministic-passport-fingerprints"
+  ],
+  "evidence_refs": [
+    "src/passport.py",
+    "sql/feature_passport.sql",
+    "tests/test_passport.py",
+    "tests/test_adversarial.py",
+    "tests/test_sql_fixture.py",
+    "machine/proof_receipt.json",
+    "machine/canonical-position.json"
+  ],
+  "truth_boundary": "Repository-local lineage admission mechanisms only. No Databricks adoption, production feature-store integration, or company-internal architecture is implied."
+}
