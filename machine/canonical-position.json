@@ -1,0 +1,22 @@
+{
+  "schema": "glaciereq.repo-canonical-position.v1",
+  "repository": "GlacierEQ/databricks-feature-lineage-passport",
+  "position_state": "RESOLVED",
+  "role": "company_specific_specialist_system",
+  "company_target": "Databricks",
+  "canonical_identity": "feature-lineage-passport",
+  "unique_value": [
+    "training admission requires a feature-lineage passport instead of accepting mystery columns",
+    "transform identity is hash-bound to the feature provenance record",
+    "feature provenance becomes an executable admission condition rather than documentation"
+  ],
+  "capability_contribution": {
+    "family": "feature_lineage_admission",
+    "extractable_mechanisms": ["lineage passport admission", "transform-hash binding", "provenance-required training gates"],
+    "ownership": "This repository remains the owning Databricks-specialist implementation; extraction preserves identity and lineage."
+  },
+  "integration_policy": {"preserve_repository_identity":true,"preserve_lineage":true,"presentation_independent":true,"size_or_loc_not_dispositive":true,"absorption_requires_functional_equivalence":true,"absorption_requires_proof_equivalence":true},
+  "next_evolution": "Extend passports across multi-step feature DAG ancestry, dataset snapshots, and reproducible transform chains with explicit lineage break detection.",
+  "evidence_refs": ["ISSUE_CONTRACT.md","machine/target-contract.json","machine/proof_receipt.json","machine/operability_receipt.json","machine/promotion_authority.json"],
+  "nonclaims": ["no Databricks affiliation", "not a production feature-store integration"]
+}
