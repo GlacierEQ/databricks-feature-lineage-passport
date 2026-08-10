@@ -1,19 +1,24 @@
 {
   "schema": "glaciereq.operability-receipt.v1",
   "repository": "GlacierEQ/databricks-feature-lineage-passport",
-  "at": "2026-08-09T22:57Z",
-  "source_sha": "35f056c7ba00622e52ee7ef0f5cc499076c6d3422d65d220f2ca73be71d57052",
-  "source_sha_algorithm": "sha256(newline_join('{rel}:{sha256(bytes)}' for src|scripts|tests .py/.md/.json))",
+  "at": "2026-08-10T04:12Z",
+  "source_sha": "1b5c06bc6b75a416d882096438a49e10875f6bde35e0d420fb2fc9ff36457270",
   "entry": "scripts/operate.py",
   "primary_output": {
-    "bad": [
-      "f2"
-    ],
-    "decision": "REFUSE",
-    "expected_decision": "REFUSE",
-    "ok": true
+    "module": "passport",
+    "ok": true,
+    "repository": "GlacierEQ/databricks-feature-lineage-passport",
+    "smoke": {
+      "args": [],
+      "content_checked": true,
+      "invoked": true,
+      "kind": "class",
+      "method": "fingerprint",
+      "module_local": true,
+      "name": "FeaturePassport",
+      "result": "97a99749a23f4cecf12965e95d800ea723f77f49e5ec4aa8570b87c1a991347c"
+    }
   },
   "dual_run_ok": true,
-  "result": "PASS",
-  "scratch_launch_log": "wave_b/databricks-feature-lineage-passport/launch.log"
+  "result": "PASS"
 }

@@ -1,21 +1,18 @@
 {
   "schema": "glaciereq.proof-receipt.v1",
   "repository": "GlacierEQ/databricks-feature-lineage-passport",
-  "source_sha": "35f056c7ba00622e52ee7ef0f5cc499076c6d3422d65d220f2ca73be71d57052",
-  "source_sha_algorithm": "sha256(newline_join('{rel}:{sha256(bytes)}' for src|scripts|tests .py/.md/.json))",
-  "proof_id": "wave-b-fix-databricks-feature-lineage-passport-1786316261",
+  "source_sha": "1b5c06bc6b75a416d882096438a49e10875f6bde35e0d420fb2fc9ff36457270",
+  "proof_id": "elite-databricks-feature-lineage-passport-1786335149",
   "environment": {
-    "python": "3.9.6",
-    "PYTHONPATH": "."
+    "python": "/Users/kcbflux/job-app/excellence/.venv-elite/bin/python",
+    "PYTHONPATH": "/Users/kcbflux/job-app/repos/databricks-feature-lineage-passport:/Users/kcbflux/job-app/repos/databricks-feature-lineage-passport/src",
+    "entry": "unittest"
   },
   "tests": [
-    "PYTHONPATH=. python3 -m unittest discover -s tests -v (x2)"
+    "/Users/kcbflux/job-app/excellence/.venv-elite/bin/python -m unittest discover -s tests -v (x2)"
   ],
   "adversarial_tests": [
     "tests/test_adversarial.py"
-  ],
-  "authority_tests": [
-    "tests/test_promotion_authority.py::test_real_machine_grant_verifies_against_proof_receipt"
   ],
   "runtime": {
     "operate": "scripts/operate.py (x2)",
@@ -27,9 +24,8 @@
     "not production deployed",
     "reference implementation only"
   ],
-  "timestamp": "2026-08-09T22:57Z",
+  "timestamp": "2026-08-10T04:12Z",
   "artifact_hashes": {
-    "operability_receipt": "3d2f52bbd42ff0ef9b66cf8d3f1f1b6dff377585d308a724a0705225750aa8a4"
-  },
-  "scratch_proof_log": "wave_b/databricks-feature-lineage-passport/proof.log"
+    "operability_receipt": "c4b170250539dce755efeb6aadfff3229f2b225ca899fd9a464b23f9922d50ce"
+  }
 }
