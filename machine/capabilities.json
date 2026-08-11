@@ -8,7 +8,13 @@
     "transform-hash-provenance-binding",
     "feature-name-passport-consistency",
     "fail-closed-missing-lineage-refusal",
-    "deterministic-passport-fingerprints"
+    "deterministic-passport-fingerprints",
+    "dataset-snapshot-lineage-nodes",
+    "multi-step-feature-dag-ancestry",
+    "ordered-parent-fingerprint-binding",
+    "reproducible-lineage-graph-fingerprints",
+    "lineage-break-detection",
+    "strict-training-lineage-admission"
   ],
   "evidence_refs": [
     "src/passport.py",
@@ -16,8 +22,8 @@
     "tests/test_passport.py",
     "tests/test_adversarial.py",
     "tests/test_sql_fixture.py",
-    "machine/proof_receipt.json",
+    "machine/evolution-receipts/2026-08-11-multistep-lineage-dag.json",
     "machine/canonical-position.json"
   ],
-  "truth_boundary": "Repository-local lineage admission mechanisms only. No Databricks adoption, production feature-store integration, or company-internal architecture is implied."
+  "truth_boundary": "Repository-local lineage consistency and training-admission mechanisms only. Snapshot/content/transform identities remain caller-supplied unless externally attested. No Databricks adoption, Unity Catalog integration, production feature-store integration, or company-internal architecture is implied."
 }
