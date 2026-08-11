@@ -32,11 +32,20 @@ class CanonicalPositionContractTests(unittest.TestCase):
         self.assertIn("transform-hash-provenance-binding", capabilities)
         self.assertIn("fail-closed-missing-lineage-refusal", capabilities)
         self.assertIn("deterministic-passport-fingerprints", capabilities)
+        self.assertIn("multi-step-feature-dag-ancestry", capabilities)
+        self.assertIn("lineage-break-detection", capabilities)
         self.assertNotIn("hyper-scaling", capabilities)
 
     def test_evolution_and_claim_boundary_are_material(self):
-        self.assertTrue(STATE["evolution_cursor"].startswith("next:"))
-        self.assertIn("multi-step feature DAG ancestry", POSITION["next_evolution"])
+        self.assertEqual(
+            POSITION["completed_evolution"]["cursor"],
+            "next:multi_step_feature_DAG_ancestry_dataset_snapshots_reproducible_transform_chains_lineage_break_detection",
+        )
+        self.assertEqual(
+            STATE["evolution_cursor"],
+            "next:catalog_attested_snapshots_reproducible_transform_execution_receipts_and_lineage_rebuild_proof",
+        )
+        self.assertIn("externally attested catalog identities", POSITION["next_evolution"])
         self.assertIn("no Databricks affiliation", POSITION["nonclaims"])
         self.assertIn("No Databricks adoption", CAPABILITIES["truth_boundary"])
 
