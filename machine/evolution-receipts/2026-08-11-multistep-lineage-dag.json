@@ -1,0 +1,27 @@
+{
+  "schema": "glaciereq.repo-evolution-receipt.v1",
+  "repository": "GlacierEQ/databricks-feature-lineage-passport",
+  "consumed_cursor": "next:multi_step_feature_DAG_ancestry_dataset_snapshots_reproducible_transform_chains_lineage_break_detection",
+  "candidate_source_sha": "760b88b36e6dac0ee35f432ba6a7931176dbd839",
+  "workflow_run": 31464542299,
+  "result": "PASS",
+  "observed_lanes": {"python_unittest_and_sql_fixture":"PASS"},
+  "verified_mechanisms": [
+    "dataset snapshot nodes bind dataset name, snapshot identity, and content hash",
+    "transform nodes bind ordered parent node identity plus expected parent fingerprint",
+    "multi-parent and multi-step feature DAG ancestry is represented explicitly",
+    "strict training admission refuses passports without reproducible lineage graphs",
+    "missing parents, parent-fingerprint mismatches, missing terminal nodes, cycles/no-reachable-snapshot ancestry fail closed",
+    "dataset snapshot changes alter graph/passport identity and expose downstream parent-fingerprint breaks",
+    "transform parent order is identity-bearing",
+    "normalized SQL tables preserve snapshot, transform, and ordered parent-edge representation while Python remains strict DAG verification authority"
+  ],
+  "boundaries": [
+    "dataset snapshot IDs and content hashes are caller-supplied unless externally attested",
+    "transform hashes are caller-supplied unless backed by reproducible execution evidence",
+    "SQL alone does not prove the polymorphic parent union or full DAG validity",
+    "no Databricks affiliation or adoption",
+    "no Unity Catalog or production feature-store integration"
+  ],
+  "next_cursor": "next:catalog_attested_snapshots_reproducible_transform_execution_receipts_and_lineage_rebuild_proof"
+}
