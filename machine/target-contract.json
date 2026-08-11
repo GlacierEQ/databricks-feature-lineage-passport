@@ -1,22 +1,23 @@
 {
   "schema": "glaciereq.repo-target-contract.v1",
-  "identity": {
-    "repository_id": "GlacierEQ/databricks-feature-lineage-passport",
-    "family": "elite-estate"
+  "identity": {"repository_id":"GlacierEQ/databricks-feature-lineage-passport","family":"elite-estate","canonical_identity":"feature-lineage-passport"},
+  "current": {"state":"EVOLVING","implemented":true,"tested":true,"deployed":false,"evolution_generation":1},
+  "target": {
+    "purpose": "Require reproducible multi-step feature ancestry before strict training admission.",
+    "central_bottleneck": "Single-hop lineage labels cannot prove dataset snapshot identity, transform ancestry, parent integrity, or exactly where provenance broke."
   },
-  "current": {
-    "state": "PROMOTED",
-    "implemented": true,
-    "tested": true,
-    "deployed": false
-  },
-  "nonclaims": [
-    "no employer affiliation",
-    "no production deployment without receipt"
+  "invariants": [
+    "dataset snapshots bind dataset, snapshot identity, and content hash",
+    "transform steps bind ordered parent node identities and expected fingerprints",
+    "strict training admission refuses missing or invalid lineage graphs",
+    "missing parents and parent fingerprint mismatches fail closed",
+    "terminal ancestry must reach at least one dataset snapshot",
+    "dataset snapshot changes alter graph/passport identity and break stale descendant parent references",
+    "SQL preserves normalized lineage representation while Python remains strict DAG verification authority"
   ],
-  "donor_plan": {
-    "mode": "none",
-    "donors": []
-  },
-  "frozen_at": "2026-08-10T04:12Z"
+  "promotion": {"required_tests":["python","sql_fixture","adversarial","lineage_break_detection"],"require_exact_source_sha":true,"require_receipt":true,"require_nonclaims":true},
+  "donor_plan": {"status":"RESOLVED","strategy":"INDEPENDENT_MECHANISM_PRESERVED","donors":[]},
+  "nonclaims": ["no Databricks affiliation","no Databricks adoption","no production feature-store integration","no Unity Catalog integration","dataset snapshot and transform identities are caller-supplied unless externally attested"],
+  "completed_evolution_receipt": "machine/evolution-receipts/2026-08-11-multistep-lineage-dag.json",
+  "next_evolution": "next:catalog_attested_snapshots_reproducible_transform_execution_receipts_and_lineage_rebuild_proof"
 }
