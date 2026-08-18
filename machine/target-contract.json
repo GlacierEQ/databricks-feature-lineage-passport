@@ -1,6 +1,6 @@
 {
   "schema": "glaciereq.repo-target-contract.v1",
-  "identity": {"repository_id":"GlacierEQ/databricks-feature-lineage-passport","family":"elite-estate","canonical_identity":"feature-lineage-passport"},
+  "identity": {"repository_id":"GlacierEQ/databricks-feature-lineage-passport","family":"elite-estate","apex_identity":"feature-lineage-passport"},
   "current": {"state":"EVOLVING","implemented":true,"tested":true,"deployed":false,"evolution_generation":1},
   "target": {
     "purpose": "Require reproducible multi-step feature ancestry before strict training admission.",

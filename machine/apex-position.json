@@ -1,10 +1,10 @@
 {
-  "schema": "glaciereq.repo-canonical-position.v1",
+  "schema": "glaciereq.repo-apex-position.v1",
   "repository": "GlacierEQ/databricks-feature-lineage-passport",
   "position_state": "RESOLVED",
   "role": "company_specific_specialist_system",
   "company_target": "Databricks",
-  "canonical_identity": "feature-lineage-passport",
+  "apex_identity": "feature-lineage-passport",
   "unique_value": [
     "strict training admission requires reproducible feature-lineage ancestry instead of accepting mystery columns",
     "dataset snapshot identity and ordered transform-parent fingerprints make multi-step provenance content-addressed",

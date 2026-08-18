@@ -4,7 +4,7 @@
   "principal_state": "EVOLVING",
   "claim_ceiling": "PROMOTED",
   "gates": {
-    "IDENTITY_RESOLVED": {"status":"PASS","evidence":"repository identity + machine/canonical-position.json"},
+    "IDENTITY_RESOLVED": {"status":"PASS","evidence":"repository identity + machine/apex-position.json"},
     "PROBLEM_VERIFIED": {"status":"PASS","evidence":"ISSUE_CONTRACT.md + tested feature-lineage admission mechanism"},
     "TARGET_CONTRACT_FROZEN": {"status":"PASS","evidence":"machine/target-contract.json refreshed after completed evolution"},
     "DONOR_PLAN_RESOLVED": {"status":"PASS","evidence":"independent Databricks-specialist mechanism; identity and lineage preserved"},
@@ -15,12 +15,12 @@
     "OPERABLE_AND_OBSERVABLE": {"status":"PASS","evidence":"lineage verification exposes graph fingerprint, reachable nodes, snapshot nodes, transform nodes, and exact break reasons"},
     "PROOF_RECEIPT_BOUND": {"status":"PASS","evidence":"machine/proof_receipt.json retained + machine/evolution-receipts/2026-08-11-multistep-lineage-dag.json"},
     "AUTHORITY_BOUND": {"status":"PASS","evidence":"strict training admission is repository-local; external catalog authenticity remains explicit nonclaim"},
-    "PROJECTION_TRUTH_CLOSED": {"status":"PASS","evidence":"canonical position preserves no Databricks affiliation/adoption/Unity Catalog/production claim"},
-    "CANONICAL_POSITION_RESOLVED": {"status":"PASS","evidence":"machine/canonical-position.json owns feature_lineage_admission with completed evolution receipt"},
+    "PROJECTION_TRUTH_CLOSED": {"status":"PASS","evidence":"apex position preserves no Databricks affiliation/adoption/Unity Catalog/production claim"},
+    "APEX_POSITION_RESOLVED": {"status":"PASS","evidence":"machine/apex-position.json owns feature_lineage_admission with completed evolution receipt"},
     "EVOLUTION_CURSOR_DEFINED": {"status":"PASS","evidence":"next:catalog_attested_snapshots_reproducible_transform_execution_receipts_and_lineage_rebuild_proof"},
     "problem_verified": true,
     "unique_value_known": true,
-    "canonical_identity_known": true,
+    "apex_identity_known": true,
     "central_mechanism_implemented": true,
     "deterministic_tests_pass": true,
     "adversarial_tests_pass": true,
@@ -29,7 +29,7 @@
     "proof_receipt_bound_to_sha": true,
     "reusable_capabilities_extracted": true,
     "projections_truth_consistent": true,
-    "canonical_position_resolved": true,
+    "apex_position_resolved": true,
     "evolution_cursor_defined": true
   },
   "history": [
@@ -44,8 +44,8 @@
     {"from":"ADVERSARIAL_VERIFIED","to":"OPERABLE","gate":"OPERABLE_AND_OBSERVABLE","result":"PASS"},
     {"from":"OPERABLE","to":"PROOF_REPRODUCED","gate":"PROOF_RECEIPT_BOUND","result":"PASS"},
     {"from":"PROOF_REPRODUCED","to":"PROMOTED","gate":"AUTHORITY_BOUND","result":"PASS"},
-    {"from":"PROMOTED","to":"CANONICAL","gate":"CANONICAL_POSITION_RESOLVED","result":"PASS"},
-    {"from":"CANONICAL","to":"EVOLVING","gate":"EVOLUTION_CURSOR_DEFINED","result":"PASS"}
+    {"from":"PROMOTED","to":"APEX","gate":"APEX_POSITION_RESOLVED","result":"PASS"},
+    {"from":"APEX","to":"EVOLVING","gate":"EVOLUTION_CURSOR_DEFINED","result":"PASS"}
   ],
   "evolution_history": [
     {
@@ -59,7 +59,7 @@
   ],
   "contract_ref": "machine/target-contract.json",
   "scores_ref": "machine/excellence-scores.json",
-  "canonical_position_ref": "machine/canonical-position.json",
+  "apex_position_ref": "machine/apex-position.json",
   "capabilities_ref": "machine/capabilities.json",
   "evolution_cursor": "next:catalog_attested_snapshots_reproducible_transform_execution_receipts_and_lineage_rebuild_proof",
   "state": "EVOLVING"
